@@ -49,14 +49,14 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     acme.cert-manager.io/http01-edit-in-place: "true"
   hosts:
-    - host: argo-demo.amazon1app.com
+    - host: ext-demo.amazon1app.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls: 
-    - secretName: argo-demo-tls
+    - secretName: ext-demo-tls
       hosts:
-        - argo-demo.amazon1app.com
+        - ext-demo.amazon1app.com
 resources: 
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
